@@ -28,6 +28,10 @@ the temporary buffer.
 The intention is to create simple keybinds to run often repeated commands such
 as `cargo test` or `npm run test`.
 
+
+You can define **bookmarks** for frequently used commands in your plugin configuration.  
+Bookmarks allow you to run long or complex commands using short names.
+
 ## Installation
 
 Installs like any other Neovim plugin.
@@ -37,6 +41,22 @@ Example installation with Lazy:
 ```lua
 {
   "Hubro/nvim-splitrun",
-  opts = {},
+  opts = {
+    bookmarks = {
+      build = "make",
+      npm_test = "npm run test",
+      server = "python -m http.server",
+    },
+  },
 },
 ```
+
+
+```lua
+require("nvim-splitrun").setup({
+  bookmarks = {
+      build = "make",
+      npm_test = "npm run test",
+      server = "python -m http.server",
+  } 
+})
