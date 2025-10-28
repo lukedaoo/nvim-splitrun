@@ -40,7 +40,7 @@ Example installation with Lazy:
 
 ```lua
 {
-  "Hubro/nvim-splitrun",
+  "lukedaoo/nvim-splitrun",
   opts = {
     bookmarks = {
       build = "make",
